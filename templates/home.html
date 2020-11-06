@@ -5,11 +5,22 @@
   
 {% block content %}
 {% if user.is_authenticated %}
- Hi {{ user.username }}! You are {{ user.age }} years old.
+<br />
+<div class="jumbotron">
+  <h1 class="display-4">Newspaper app</h1>
+  <p class="lead">A Newspaper website built with Django </p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="{% url 'article_list' %}" role="button">
+    View All Articles</a>
+  </p>
+
+</div>
+
+ <!-- Hi {{ user.username }}! You are {{ user.age }} years old.
  <P><a href="{% url 'logout' %} ">Log out</a></P>
 {% else %}
   <p>You are not logged in</p>
   <a href="{% url 'login' %}">Log in</a> |
   <a href="{% url 'signup' %}">Sign up</a>
-{% endif %}
+{% endif %} -->
 {% endblock content %}
